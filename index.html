@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Интерактивная таблица</title>
+  <link rel="stylesheet" type="text/css" href="https://cdn.datatables.net/1.13.4/css/jquery.dataTables.css">
+  <script src="https://code.jquery.com/jquery-3.5.1.js"></script>
+  <script src="https://cdn.datatables.net/1.13.4/js/jquery.dataTables.js"></script>
+</head>
+<body>
+
+<table id="myTable" class="display" style="width:100%">
+    <thead>
+        <tr>
+            <th>Имя</th>
+            <th>Возраст</th>
+            <th>Город</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr><td>Аня</td><td>25</td><td>Москва</td></tr>
+        <tr><td>Иван</td><td>30</td><td>Санкт-Петербург</td></tr>
+        <tr><td>Ольга</td><td>22</td><td>Новосибирск</td></tr>
+    </tbody>
+</table>
+
+<script>
+  $(document).ready(function () {
+    $('#myTable').DataTable({
+      paging: true,
+      searching: true,
+      ordering: true,
+      info: true
+    });
+  });
+</script>
+
+</body>
+</html>
+
